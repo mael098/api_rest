@@ -14,6 +14,7 @@ app.use(express.json())
 // routes
 app.use('/api/index',require('./router/index'))
 app.use('/api/movis',require('./router/movis'))
+app.use('/api/users', require('./router/users'))
 
 // empesando el servidor
 app.listen(app.get("port"), () => {
