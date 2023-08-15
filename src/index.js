@@ -12,12 +12,12 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 // routes
-app.use('/api/index',require('./router/index'))
+app.use(require('./router/index'))
 app.use('/api/movis',require('./router/movis'))
-app.use('/api/users', require('./router/users'))
+app.use('/api/users',require('./router/users'))
 
 // empesando el servidor
 app.listen(app.get("port"), () => {
-  console.log(`Server on port ${app.get("port")}`)
+  console.log(`Server on port ${app.get("port")} http://localhost:3000/`)
 })
 
