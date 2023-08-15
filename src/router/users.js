@@ -1,9 +1,10 @@
 const {Router} = require('express')
 const router = Router()
-import fetch from "node-fetch"
+// const fetch = ('node-fetch')
 router.get('/', async (req, res) => {
     const response = await fetch("https://jsonplaceholder.typicode.com/users")
     const users = await response.json()
+    console.log(users);
     res.json(users)
 })
 
