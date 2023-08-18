@@ -20,7 +20,7 @@ router.post("/", (req, res) => {
   }
 })
 
-router.put("/:id", (req, res) => {
+router.patch("/:id", (req, res) => {
   const { id } = req.params
   const { title, director, year, rankinga } = req.body
   if (title && director && year && rankinga) {
