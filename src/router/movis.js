@@ -1,6 +1,6 @@
 const { Router, json } = require("express")
 const router = Router()
-const movis = require("./semple.json")
+const movis = require("./base/semple.json")
 
 const _ = require("underscore")
 
@@ -47,5 +47,6 @@ router.delete("/:id", (req, res) => {
   })
   res.send(movis)
 })
+
 
 module.exports = router
